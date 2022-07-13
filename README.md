@@ -1,4 +1,4 @@
-# DeepTIMe: Deep Time-Index Meta-Learning for Non-stationary Forecasting
+# DeepTIMe: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting
 
 <p align="center">
 <img src=".\pics\deeptime.png" width = "700" alt="" align=center />
@@ -85,3 +85,12 @@ authors for open-sourcing their work.
 * https://github.com/ElementAI/N-BEATS
 * https://github.com/zhouhaoyi/Informer2020
 * https://github.com/thuml/Autoformer
+
+## Citation
+
+Please consider citing if you find this code useful to your research.
+<pre>@article{woo2022deeptime,
+    title={DeepTIMe: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting},
+    author={Gerald Woo and Chenghao Liu and Doyen Sahoo and Akshat Kumar and Steven C. H. Hoi},
+    year={2022},
+}</pre>
