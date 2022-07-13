@@ -1,0 +1,37 @@
+build.experiment_name = 'Traffic/720M'
+build.module = 'experiments.forecast'
+build.repeat = 1
+build.variables_dict = {
+}
+
+instance.model_type = 'deeptime'
+instance.save_vals = False
+
+get_optimizer.lr = 1e-3
+get_optimizer.lambda_lr = 1.
+get_optimizer.weight_decay = 0.
+
+get_scheduler.warmup_epochs = 5
+
+get_data.batch_size = 256
+
+train.loss_name = 'mse'
+train.epochs = 50
+train.clip = 10.
+
+Checkpoint.patience = 7
+
+deeptime.layer_size = 256
+deeptime.inr_layers = 5
+deeptime.n_fourier_feats = 4096
+deeptime.scales = [0.01, 0.1, 1, 5, 10, 20, 50, 100]
+
+ForecastDataset.data_path = 'traffic/traffic.csv'
+ForecastDataset.target = 'OT'
+ForecastDataset.scale = True
+ForecastDataset.cross_learn = False
+ForecastDataset.time_features = []
+ForecastDataset.normalise_time_features = True
+ForecastDataset.features = 'M'
+ForecastDataset.horizon_len = 720
+ForecastDataset.lookback_mult = 3
