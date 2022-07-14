@@ -6,7 +6,7 @@
 <b>Figure 1.</b> Overall approach of DeepTIMe.
 </p>
 
-Official PyTorch code repository for the DeepTIMe paper.
+Official PyTorch code repository for the [DeepTIMe paper](https://arxiv.org/abs/2207.06046).
 
 ## Requirements
 
@@ -93,4 +93,5 @@ Please consider citing if you find this code useful to your research.
     title={DeepTIMe: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting},
     author={Gerald Woo and Chenghao Liu and Doyen Sahoo and Akshat Kumar and Steven C. H. Hoi},
     year={2022},
+    url={https://arxiv.org/abs/2207.06046},
 }</pre>
