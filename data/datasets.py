@@ -49,7 +49,7 @@ class ForecastDataset(Dataset):
             f"only 'lookback_len' xor 'lookback_mult' should be specified"
 
         self.flag = flag
-        self.lookback_len = lookback_len or int(horizon_len * lookback_mult)
+        sself.lookback_len = int(horizon_len * lookback_mult) if lookback_mult is not None else lookback_len
         self.lookback_aux_len = lookback_aux_len
         self.horizon_len = horizon_len
         self.scale = scale
