@@ -8,6 +8,11 @@
 
 Official PyTorch code repository for the [DeepTIMe paper](https://arxiv.org/abs/2207.06046).
 
+* DeepTIMe is a deep time-index based model trained via a meta-learning formulation, yielding a strong method for
+  non-stationary time-series forecasting.
+* Experiments on real world datases in the long sequence time-series forecasting setting demonstrates that DeepTIMe
+  achieves competitive results with state-of-the-art methods and is highly efficient.
+
 ## Requirements
 
 Dependencies for this project can be installed by:
@@ -47,6 +52,16 @@ __Option B__: Directly run the experiments with hyperparameters provided in the 
 
 Finally, results can be viewed on tensorboard by running `tensorboard --logdir storage/experiments/`, or in
 the `storage/experiments/experiment_name/metrics.npy` file.
+
+## Main Results
+
+We conduct extensive experiments on both synthetic and real world datasets, showing that DeepTIMe has extremely
+competitive performance, achieving state-of-the-art results on 20 out of 24 settings for the multivariate forecasting
+benchmark based on MSE.
+<p align="center">
+<img src=".\pics\results.png" width = "700" alt="" align=center />
+<br><br>
+</p>
 
 ## Detailed Usage
 
