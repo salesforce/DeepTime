@@ -46,7 +46,7 @@ __Option A__: Run the full hyperparameter search.
 
 __Option B__: Directly run the experiments with hyperparameters provided in the configuration files.
 
-1. Run the following command to generate the experiments: `make build-all path=experiments/configs`.
+1. Run the following command to generate the experiments: `make build-all path=experiments/configs/ETTm2`.
 2. Run the following script to perform training and evaluation: `./run.sh` (you may need to run `chmod u+x run.sh`
    first).
 
