@@ -1,16 +1,16 @@
-# DeepTIMe: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting
+# DeepTime: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting
 
 <p align="center">
 <img src=".\pics\deeptime.png" width = "700" alt="" align=center />
 <br><br>
-<b>Figure 1.</b> Overall approach of DeepTIMe.
+<b>Figure 1.</b> Overall approach of DeepTime.
 </p>
 
-Official PyTorch code repository for the [DeepTIMe paper](https://arxiv.org/abs/2207.06046).
+Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/2207.06046).
 
-* DeepTIMe is a deep time-index based model trained via a meta-learning formulation, yielding a strong method for
+* DeepTime is a deep time-index based model trained via a meta-learning formulation, yielding a strong method for
   non-stationary time-series forecasting.
-* Experiments on real world datases in the long sequence time-series forecasting setting demonstrates that DeepTIMe
+* Experiments on real world datases in the long sequence time-series forecasting setting demonstrates that DeepTime
   achieves competitive results with state-of-the-art methods and is highly efficient.
 
 ## Requirements
@@ -55,7 +55,7 @@ the `storage/experiments/experiment_name/metrics.npy` file.
 
 ## Main Results
 
-We conduct extensive experiments on both synthetic and real world datasets, showing that DeepTIMe has extremely
+We conduct extensive experiments on both synthetic and real world datasets, showing that DeepTime has extremely
 competitive performance, achieving state-of-the-art results on 20 out of 24 settings for the multivariate forecasting
 benchmark based on MSE.
 <p align="center">
@@ -94,7 +94,7 @@ a `.gin` configuration file based on the `build.variables_dict` argument.
 
 ## Acknowledgements
 
-The implementation of DeepTIMe relies on resources from the following codebases and repositories, we thank the original
+The implementation of DeepTime relies on resources from the following codebases and repositories, we thank the original
 authors for open-sourcing their work.
 
 * https://github.com/ElementAI/N-BEATS
@@ -105,7 +105,7 @@ authors for open-sourcing their work.
 
 Please consider citing if you find this code useful to your research.
 <pre>@article{woo2022deeptime,
-    title={DeepTIMe: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting},
+    title={DeepTime: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting},
     author={Gerald Woo and Chenghao Liu and Doyen Sahoo and Akshat Kumar and Steven C. H. Hoi},
     year={2022},
     url={https://arxiv.org/abs/2207.06046},
