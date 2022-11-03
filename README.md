@@ -12,7 +12,7 @@ Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/
   non-stationary time-series forecasting.
 * Experiments on real world datases in the long sequence time-series forecasting setting demonstrates that DeepTime
   achieves competitive results with state-of-the-art methods and is highly efficient.
-
+  
 ## Requirements
 
 Dependencies for this project can be installed by:

@@ -33,5 +33,5 @@ ForecastDataset.cross_learn = False
 ForecastDataset.time_features = []
 ForecastDataset.normalise_time_features = True
 ForecastDataset.features = 'M'
-ForecastDataset.horizon_len = 336
+ForecastDataset.horizon_len = 48
 ForecastDataset.lookback_mult = 5

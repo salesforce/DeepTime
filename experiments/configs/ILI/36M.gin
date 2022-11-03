@@ -1,4 +1,4 @@
-build.experiment_name = 'ILI/96M'
+build.experiment_name = 'ILI/192M'
 build.module = 'experiments.forecast'
 build.repeat = 1
 build.variables_dict = {
@@ -33,5 +33,5 @@ ForecastDataset.cross_learn = False
 ForecastDataset.time_features = []
 ForecastDataset.normalise_time_features = True
 ForecastDataset.features = 'M'
-ForecastDataset.horizon_len = 96
-ForecastDataset.lookback_mult = 9
+ForecastDataset.horizon_len = 36
+ForecastDataset.lookback_mult = 7
