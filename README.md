@@ -6,7 +6,7 @@
 <b>Figure 1.</b> Overall approach of DeepTime.
 </p>
 
-Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/2207.06046).
+Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/2207.06046). Check out our [blog post](https://blog.salesforceairesearch.com/deeptime-meta-learning-time-series-forecasting/)!
 
 * DeepTime is a deep time-index based model trained via a meta-optimization formulation, yielding a strong method for
   time-series forecasting.
