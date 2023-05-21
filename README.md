@@ -1,4 +1,4 @@
-# DeepTime: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting
+# Learning Deep Time-index Models for Time Series Forecasting (ICML 2023)
 
 <p align="center">
 <img src=".\pics\deeptime.png" width = "700" alt="" align=center />
@@ -8,8 +8,8 @@
 
 Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/2207.06046).
 
-* DeepTime is a deep time-index based model trained via a meta-learning formulation, yielding a strong method for
-  non-stationary time-series forecasting.
+* DeepTime is a deep time-index based model trained via a meta-optimization formulation, yielding a strong method for
+  time-series forecasting.
 * Experiments on real world datases in the long sequence time-series forecasting setting demonstrates that DeepTime
   achieves competitive results with state-of-the-art methods and is highly efficient.
   
