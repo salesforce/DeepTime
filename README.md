@@ -6,7 +6,7 @@
 <b>Figure 1.</b> Overall approach of DeepTime.
 </p>
 
-Official PyTorch code repository for the [DeepTime paper](https://arxiv.org/abs/2207.06046). Check out our [blog post](https://blog.salesforceairesearch.com/deeptime-meta-learning-time-series-forecasting/)!
+Official PyTorch code repository for the [DeepTime paper](https://proceedings.mlr.press/v202/woo23b.html). Check out our [blog post](https://blog.salesforceairesearch.com/deeptime-meta-learning-time-series-forecasting/)!
 
 * DeepTime is a deep time-index based model trained via a meta-optimization formulation, yielding a strong method for
   time-series forecasting.
@@ -104,9 +104,17 @@ authors for open-sourcing their work.
 ## Citation
 
 Please consider citing if you find this code useful to your research.
-<pre>@article{woo2022deeptime,
-    title={DeepTime: Deep Time-Index Meta-Learning for Non-Stationary Time-Series Forecasting},
-    author={Gerald Woo and Chenghao Liu and Doyen Sahoo and Akshat Kumar and Steven C. H. Hoi},
-    year={2022},
-    url={https://arxiv.org/abs/2207.06046},
+<pre>@InProceedings{pmlr-v202-woo23b,
+  title = 	 {Learning Deep Time-index Models for Time Series Forecasting},
+  author =       {Woo, Gerald and Liu, Chenghao and Sahoo, Doyen and Kumar, Akshat and Hoi, Steven},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {37217--37237},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v202/woo23b/woo23b.pdf},
+  url = 	 {https://proceedings.mlr.press/v202/woo23b.html}
 }</pre>
