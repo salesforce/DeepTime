@@ -36,8 +36,12 @@ class ForecastExperiment(Experiment):
                           datetime_feats=train_set.timestamps.shape[-1]).to(default_device())
         checkpoint = Checkpoint(self.root)
 
-        # train forecasting task
-        model = train(model, checkpoint, train_loader, val_loader, test_loader)
+        if self.isEval:
+            model.load_state_dict(torch.load(checkpoint.model_path))
+            model.eval()
+        else:
+            #train forecasting task
+            model = train(model, checkpoint, train_loader, val_loader, test_loader)
 
         # testing
         val_metrics = validate(model, loader=val_loader, report_metrics=True)
@@ -47,8 +51,17 @@ class ForecastExperiment(Experiment):
 
         val_metrics = {f'ValMetric/{k}': v for k, v in val_metrics.items()}
         test_metrics = {f'TestMetric/{k}': v for k, v in test_metrics.items()}
+        logging.info(f"Validation test set loss from previous model ({test_metrics['TestMetric/mse']} --> {val_metrics['ValMetric/mse']}) test vs val mse.")
         checkpoint.close({**val_metrics, **test_metrics})
 
+    def load_model(self):
+        train_set, _ = get_data(flag='train')
+        model = get_model('deeptime', datetime_feats=train_set.timestamps.shape[-1]).to(default_device())
+        checkpoint = Checkpoint(self.root)
+        model.load_state_dict(torch.load(checkpoint.model_path))
+        model.eval()
+        self.isEval = True
+        return model
 
 @gin.configurable()
 def get_optimizer(model: nn.Module,
