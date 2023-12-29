@@ -21,6 +21,7 @@ class Experiment(ABC):
     def __init__(self, config_path: str):
         self.config_path = config_path
         self.root = Path(config_path).parent
+        self.isEval = False
         gin.parse_config_file(self.config_path)
 
     @gin.configurable()
@@ -81,8 +82,10 @@ class Experiment(ABC):
         time.sleep(random.uniform(0, timer))
         running_flag = os.path.join(self.root, '_RUNNING')
         success_flag = os.path.join(self.root, '_SUCCESS')
-        if os.path.isfile(success_flag) or os.path.isfile(running_flag):
+        if os.path.isfile(running_flag):
             return
+        elif os.path.isfile(success_flag):
+            self.isEval = True
         elif not os.path.isfile(running_flag):
             Path(running_flag).touch()
 
@@ -96,7 +99,7 @@ class Experiment(ABC):
             raise Exception('KeyboardInterrupt')
 
         # mark experiment as finished.
-        Path(running_flag).unlink()
+        Path(running_flag).unlink() if os.path.isfile(running_flag) else None
         Path(success_flag).touch()
 
     def build_experiment(self):
