@@ -11,6 +11,12 @@ build-all: .require-path
 run: .require-command
 	bash -c "`cat ${ROOT}/${command}`"
 
+results: .require-path
+	@@for p in $(shell ls ${path});do \
+		echo "$$p-> `grep Validation ${path}/$$p/instance.log 2> /dev/null|tail -1`" | \
+			sed -e "s/\\(.*\\)->.*(\\([0-9.]*\\) -->.*).*/\1,\2/"; \
+	done
+
 .require-config:
 ifndef config
 	$(error config is required)
